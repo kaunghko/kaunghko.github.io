@@ -281,70 +281,17 @@
                 <p class="section-subtitle">Insights, learnings, and thoughts on software engineering</p>
             </div>
 
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-card-content">
-                        <div class="blog-card-meta">
-                            <span class="blog-card-date">September 7, 2025</span>
-                            <span class="blog-card-tag">Tutorial</span>
-                        </div>
-                        <h3 class="blog-card-title">
-                            <a href="blog/personal-domain-setup/index.html">Personal Domain Setup</a>
-                        </h3>
-                        <p class="blog-card-excerpt">
-                            How I set up a custom domain for my GitHub Pages site using Namecheap. Complete step-by-step
-                            guide included.
-                        </p>
-                    </div>
-                </article>
+            <div class="blog-grid" id="blogGrid">
+                <!-- Blog posts will be dynamically loaded here -->
+            </div>
 
-                <article class="blog-card">
-                    <div class="blog-card-content">
-                        <div class="blog-card-meta">
-                            <span class="blog-card-date">August 31, 2025</span>
-                            <span class="blog-card-tag">Learning</span>
-                        </div>
-                        <h3 class="blog-card-title">
-                            <a href="blog/topik6-in-10months/index.html">How I Learned Korean to TOPIK 6 in 10
-                                Months</a>
-                        </h3>
-                        <p class="blog-card-excerpt">
-                            My journey of learning Korean from complete beginner to TOPIK 6 in approximately 10 months.
-                            Detailed strategies included.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-card-content">
-                        <div class="blog-card-meta">
-                            <span class="blog-card-date">September 6, 2025</span>
-                            <span class="blog-card-tag">Reflection</span>
-                        </div>
-                        <h3 class="blog-card-title">
-                            <a href="blog/weekly-learnings-1/index.html">Reflections | First Week of a New Semester</a>
-                        </h3>
-                        <p class="blog-card-excerpt">
-                            Course overview for the new semester including Algorithms, Computer Networks, Linear
-                            Algebra, and more.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-card-content">
-                        <div class="blog-card-meta">
-                            <span class="blog-card-date">September 6, 2025</span>
-                            <span class="blog-card-tag">Reflection</span>
-                        </div>
-                        <h3 class="blog-card-title">
-                            <a href="blog/weekly-learnings-2/index.html">Reflections | Week Two</a>
-                        </h3>
-                        <p class="blog-card-excerpt">
-                            Course progress, challenges with formula derivations, and goals for the upcoming week.
-                        </p>
-                    </div>
-                </article>
+            <div class="blog-see-more" id="blogSeeMore" style="display: none;">
+                <a href="blog/" class="btn btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                    See more posts...
+                </a>
             </div>
         </div>
     </section>
@@ -594,6 +541,52 @@
         // Make hero visible immediately
         document.querySelector('.hero').style.opacity = '1';
         document.querySelector('.hero').style.transform = 'translateY(0)';
+
+        // Dynamic Blog Loading
+        const MAX_POSTS_DISPLAYED = 4;
+        const blogGrid = document.getElementById('blogGrid');
+        const blogSeeMore = document.getElementById('blogSeeMore');
+
+        async function loadBlogPosts() {
+            try {
+                const response = await fetch('blog/posts.json');
+                const posts = await response.json();
+
+                // Sort posts by date (most recent first)
+                posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                // Display only the first 3 posts
+                const postsToShow = posts.slice(0, MAX_POSTS_DISPLAYED);
+
+                // Create blog cards HTML
+                blogGrid.innerHTML = postsToShow.map(post => `
+                    <article class="blog-card">
+                        <div class="blog-card-content">
+                            <div class="blog-card-meta">
+                                <span class="blog-card-date">${post.displayDate}</span>
+                                <span class="blog-card-tag">${post.tag}</span>
+                            </div>
+                            <h3 class="blog-card-title">
+                                <a href="blog/${post.slug}/index.html">${post.title}</a>
+                            </h3>
+                            <p class="blog-card-excerpt">${post.excerpt}</p>
+                        </div>
+                    </article>
+                `).join('');
+
+                // Show "See more" button if there are more than 3 posts
+                if (posts.length > MAX_POSTS_DISPLAYED) {
+                    blogSeeMore.style.display = 'flex';
+                }
+            } catch (error) {
+                console.error('Error loading blog posts:', error);
+                // Fallback: keep the grid empty or show error message
+                blogGrid.innerHTML = '<p style="text-align: center; color: var(--text-secondary);">Unable to load blog posts.</p>';
+            }
+        }
+
+        // Load blog posts on page load
+        loadBlogPosts();
     </script>
 </body>
 

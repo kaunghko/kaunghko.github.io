@@ -705,6 +705,12 @@ section {
     margin-top: var(--spacing-2xl);
 }
 
+.blog-see-more {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-2xl);
+}
+
 /* ============================================
    Experience Section
    ============================================ */
