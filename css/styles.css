@@ -617,12 +617,6 @@ section {
     transition: all var(--transition-fast);
 }
 
-.skill-tag.featured {
-    background: var(--accent-glow);
-    color: var(--accent);
-    font-weight: 500;
-}
-
 .skill-tag:hover {
     background: var(--accent);
     color: white;
