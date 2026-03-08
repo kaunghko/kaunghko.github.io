@@ -602,6 +602,12 @@ section {
     color: var(--text-primary);
 }
 
+.projects .skill-category p {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
@@ -652,6 +658,17 @@ section {
 
 .blog-card-content {
     padding: var(--spacing-xl);
+}
+
+.project-card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+}
+
+.project-card-link:hover .blog-card-title {
+    color: var(--accent);
 }
 
 .blog-card-meta {
