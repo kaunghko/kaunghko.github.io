@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "ai-powered-mobile-app",
+    "title": "AI-Powered Mobile App",
+    "date": "2026-03-08",
+    "displayDate": "March 8, 2026",
+    "tag": "In Progress",
+    "excerpt": "Building a React Native app with AI features focused on solving practical day-to-day problems.",
+    "readTime": "3 min read"
+  },
+  {
+    "slug": "personal-blog-improvements",
+    "title": "Personal Blog Improvements",
+    "date": "2026-03-07",
+    "displayDate": "March 7, 2026",
+    "tag": "Website",
+    "excerpt": "Continuously improving this portfolio and blog with better structure, readability, and user experience.",
+    "readTime": "2 min read"
+  }
+]

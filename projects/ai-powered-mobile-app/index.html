@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Mobile App | Kaung Htet Ko</title>
+    <meta name="description"
+        content="Overview of my AI-powered mobile app project built with React Native and practical AI-first workflows.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+
+<body>
+    <nav class="nav scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">Htet <span>Ko</span></a>
+            <div class="nav-links">
+                <a href="../../index.html#about" class="nav-link">About</a>
+                <a href="../../index.html#projects" class="nav-link">Projects</a>
+                <a href="../../index.html#skills" class="nav-link">Skills</a>
+                <a href="../../index.html#blog" class="nav-link">Blog</a>
+                <a href="../../index.html#contact" class="nav-link">Contact</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg id="sunIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="display: none;">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg id="moonIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="post-page">
+        <article class="post-content">
+            <a href="../../index.html#projects" class="back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                Back to Projects
+            </a>
+
+            <header class="post-header">
+                <h1 class="post-title">AI-Powered Mobile App</h1>
+                <p class="post-meta">March 8, 2026 · In Progress · Kaung Htet Ko</p>
+            </header>
+
+            <p>This project focuses on building a practical mobile app with <strong>React Native</strong> and integrating
+                <strong>AI-powered features</strong> that are useful in daily life.
+            </p>
+
+            <h3>Current Focus</h3>
+            <ul>
+                <li>Designing a clean and fast onboarding flow.</li>
+                <li>Testing AI-assisted task suggestions for better user productivity.</li>
+                <li>Improving mobile performance and offline reliability.</li>
+            </ul>
+
+            <h3>Tech Stack</h3>
+            <ul>
+                <li>React Native + Expo</li>
+                <li>TypeScript</li>
+                <li>Firebase (auth + data)</li>
+            </ul>
+
+            <h3>Next Milestones</h3>
+            <ol>
+                <li>Finalize the first functional prototype.</li>
+                <li>Run small user tests and gather feedback.</li>
+                <li>Iterate on the AI prompt and recommendation quality.</li>
+            </ol>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2026 Kaung Htet Ko. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const sunIcon = document.getElementById('sunIcon');
+        const moonIcon = document.getElementById('moonIcon');
+        const savedTheme = localStorage.getItem('theme') || localStorage.getItem('pref-theme') || 'dark';
+        if (savedTheme === 'light') {
+            document.body.classList.add('light');
+            sunIcon.style.display = 'block';
+            moonIcon.style.display = 'none';
+        }
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light');
+            const isLight = document.body.classList.contains('light');
+            sunIcon.style.display = isLight ? 'block' : 'none';
+            moonIcon.style.display = isLight ? 'none' : 'block';
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            localStorage.setItem('pref-theme', isLight ? 'light' : 'dark');
+        });
+    </script>
+</body>
+
+</html>
