@@ -9,7 +9,7 @@
         content="Browse all blog posts by Kaung Htet Ko on software engineering, learning, and personal growth.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -103,17 +103,16 @@
 
                 // Create blog cards HTML for all posts
                 blogGrid.innerHTML = posts.map(post => `
-                    <article class="blog-card">
-                        <div class="blog-card-content">
-                            <div class="blog-card-meta">
-                                <span class="blog-card-date">${post.displayDate}</span>
-                                <span class="blog-card-tag">${post.tag}</span>
-                            </div>
-                            <h3 class="blog-card-title">
-                                <a href="${post.slug}/index.html">${post.title}</a>
-                            </h3>
-                            <p class="blog-card-excerpt">${post.excerpt}</p>
+                    <article class="proj-card" style="--card-accent: #00d4ff">
+                        <a href="${post.slug}/index.html" style="text-decoration:none;color:inherit;display:contents">
+                        <div class="proj-card-meta">
+                            <span class="proj-card-date">${post.displayDate}</span>
+                            <span class="proj-card-tag">${post.tag}</span>
                         </div>
+                        <h3 class="proj-card-title">${post.title}</h3>
+                        <p class="proj-card-excerpt">${post.excerpt}</p>
+                        <span class="proj-card-arrow">↗</span>
+                        </a>
                     </article>
                 `).join('');
             } catch (error) {

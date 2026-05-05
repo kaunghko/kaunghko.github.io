@@ -29,7 +29,7 @@
         content="Software Engineering student at Ajou University, South Korea. GKS Scholar passionate about React Native, Machine Learning, and continuous learning.">
 
     <!-- Theme Color -->
-    <meta name="theme-color" content="#0a0f0a">
+    <meta name="theme-color" content="#0d1117">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://www.kaunghtetko.com/">
@@ -37,7 +37,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
         rel="stylesheet">
 
     <!-- Stylesheet -->
@@ -45,116 +45,141 @@
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="nav" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">Htet <span>Ko</span> | 텟꼬</a>
 
-            <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    <!-- Mobile hamburger -->
+    <button class="sidebar-hamburger" id="sidebarToggle" aria-label="Open menu">☰</button>
 
-            <div class="nav-links" id="navLinks">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#blog" class="nav-link">Blog</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <svg id="sunIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" style="display: none;">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg id="moonIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </button>
-            </div>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo-block">
+            <div class="sidebar-logo">KHK<span>_</span></div>
+            <div class="sidebar-version">portfolio v2025</div>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-bg-glow"></div>
-        <div class="hero-content">
-            <p class="hero-greeting animate-fade-in-up">Hello, I'm</p>
-            <h1 class="hero-name animate-fade-in-up animate-delay-1">Kaung Htet Ko</h1>
-            <p class="hero-title animate-fade-in-up animate-delay-2">Software Engineering Student</p>
-            <p class="hero-tagline animate-fade-in-up animate-delay-3">
-                GKS Scholar • Tech Enthusiast • Continuous Learner
-            </p>
-
-            <div class="hero-cta animate-fade-in-up animate-delay-4">
-                <a href="#blog" class="btn btn-primary">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                    </svg>
-                    Explore My Blog
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                        <polyline points="22,6 12,13 2,6" />
-                    </svg>
-                    Contact Me
-                </a>
-            </div>
-
-            <!-- Social Links -->
-            <div class="social-links animate-fade-in-up animate-delay-4">
-                <a href="mailto:kaunghtetkopma@gmail.com" class="social-link" title="Email" aria-label="Email">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                        <polyline points="22,6 12,13 2,6" />
-                    </svg>
-                </a>
-                <a href="https://github.com/kaunghko" class="social-link" title="GitHub" aria-label="GitHub"
-                    target="_blank" rel="noopener noreferrer">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                    </svg>
-                </a>
-            </div>
+        <div class="sidebar-profile">
+            <div class="sidebar-avatar">KH</div>
+            <div class="sidebar-name">Kaung Htet Ko</div>
+            <div class="sidebar-role">SE Student</div>
+            <span class="sidebar-badge">● open to work</span>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
+        <nav class="sidebar-nav">
+            <a href="#hero"       class="sidebar-nav-btn active" data-section="hero">$ home</a>
+            <a href="#about"      class="sidebar-nav-btn" data-section="about">$ about</a>
+            <a href="#projects"   class="sidebar-nav-btn" data-section="projects">$ projects</a>
+            <a href="#skills"     class="sidebar-nav-btn" data-section="skills">$ skills</a>
+            <a href="#blog"       class="sidebar-nav-btn" data-section="blog">$ blog</a>
+            <a href="#experience" class="sidebar-nav-btn" data-section="experience">$ experience</a>
+            <a href="#contact"    class="sidebar-nav-btn" data-section="contact">$ contact</a>
+        </nav>
+
+        <div class="sidebar-footer">Myanmar → 🇰🇷 Korea<br>TOEIC 990 · TOPIK 6</div>
+    </aside>
+
+    <!-- Mobile overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main content -->
+    <main class="main-content">
+
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="terminal-bar">
+                <span class="tb-user">khk</span><span class="tb-at">@portfolio</span><span class="tb-path"> ~/home</span>&nbsp;<span class="tb-cmd">$ cat README.md</span><span class="tb-cursor">▌</span>
+            </div>
+
+            <div class="hero-content">
+                <p class="hero-greeting animate-fade-in-up">// hello, world</p>
+                <h1 class="hero-name animate-fade-in-up animate-delay-1">Kaung<br><span class="name-accent">Htet Ko</span><span class="name-dot">.</span></h1>
+                <p class="hero-title animate-fade-in-up animate-delay-2">Software Engineering Student</p>
+                <p class="hero-tagline animate-fade-in-up animate-delay-3">
+                    GKS Scholar • Tech Enthusiast • Continuous Learner
+                </p>
+
+                <div class="hero-cta animate-fade-in-up animate-delay-4">
+                    <a href="#blog" class="btn btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                        </svg>
+                        Explore My Blog
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        Contact Me
+                    </a>
+                </div>
+
+                <!-- Stats row -->
+                <div class="hero-stats animate-fade-in-up animate-delay-4">
+                    <div class="stat-card" style="--stat-color: var(--pink)">
+                        <div class="stat-value">990</div>
+                        <div class="stat-label">TOEIC</div>
+                    </div>
+                    <div class="stat-card" style="--stat-color: var(--green)">
+                        <div class="stat-value">Lv. 6</div>
+                        <div class="stat-label">TOPIK</div>
+                    </div>
+                    <div class="stat-card" style="--stat-color: var(--yellow)">
+                        <div class="stat-value">GKS</div>
+                        <div class="stat-label">Scholarship</div>
+                    </div>
+                    <div class="stat-card" style="--stat-color: var(--cyan)">
+                        <div class="stat-value">3+</div>
+                        <div class="stat-label">Languages</div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="social-links animate-fade-in-up animate-delay-4">
+                    <a href="mailto:kaunghtetkopma@gmail.com" class="social-link" title="Email" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        kaunghtetkopma@gmail.com
+                    </a>
+                    <a href="https://github.com/kaunghko" class="social-link" title="GitHub" aria-label="GitHub"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        github/kaunghko
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="terminal-bar">
+                <span class="tb-user">khk</span><span class="tb-at">@portfolio</span><span class="tb-path"> ~/about</span>&nbsp;<span class="tb-cmd">$ cat README.md</span><span class="tb-cursor">▌</span>
+            </div>
+
             <div class="section-header">
-                <span class="section-label">About Me</span>
+                <span class="section-eyebrow">// about_me</span>
                 <h2 class="section-title">Who I Am</h2>
-                <p class="section-subtitle">A passionate learner with a drive to create impactful software</p>
             </div>
 
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        Hello! I'm <strong>Kaung Htet Ko</strong>, a Software Engineering student at
-                        <strong>Ajou University</strong> in South Korea. I received the
-                        <strong>Global Korea Scholarship</strong> to pursue my studies here.
+                        I'm <strong>Kaung Htet Ko</strong>, a Software Engineering student at
+                        <strong>Ajou University</strong> in South Korea, here on the
+                        <strong>Global Korea Scholarship</strong>.
                     </p>
                     <p>
-                        My journey into technology is driven by curiosity and a desire to build solutions
-                        that make a difference, at least in my surroundings. I'm currently focused on <strong>mobile development with AI</strong>.
+                        My work is driven by curiosity — I'm currently focused on mobile development with
+                        <strong>React Native</strong>, and I'm interested in how machine learning can
+                        make everyday apps smarter.
                     </p>
                     <p>
-                        When I'm not coding, I'm always learning new things, including new human languages.
-                        Fun fact: I achieved <strong>TOPIK Level 6</strong>
-                        in just 10 months of learning Korean!
+                        When I'm not coding, I'm learning languages. I achieved
+                        <strong>TOPIK Level 6</strong> in just 10 months of learning Korean,
+                        and I find the same deliberate-practice mindset applies to writing good software.
                     </p>
                 </div>
 
@@ -200,14 +225,16 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Current Projects Section -->
-    <section class="projects" id="projects">
-        <div class="container">
+        <!-- Current Projects Section -->
+        <section class="projects" id="projects">
+            <div class="terminal-bar">
+                <span class="tb-user">khk</span><span class="tb-at">@portfolio</span><span class="tb-path"> ~/projects</span>&nbsp;<span class="tb-cmd">$ cat README.md</span><span class="tb-cursor">▌</span>
+            </div>
+
             <div class="section-header">
-                <span class="section-label">Current Projects</span>
+                <span class="section-label">// projects</span>
                 <h2 class="section-title">What I'm Building</h2>
                 <p class="section-subtitle">A quick look at the projects I'm actively working on right now</p>
             </div>
@@ -224,21 +251,22 @@
                     See all projects...
                 </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Skills</span>
-                <h2 class="section-title">What I Work With</h2>
-                <p class="section-subtitle">Technologies and tools I use to bring ideas to life</p>
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <div class="terminal-bar">
+                <span class="tb-user">khk</span><span class="tb-at">@portfolio</span><span class="tb-path"> ~/skills</span>&nbsp;<span class="tb-cmd">$ cat README.md</span><span class="tb-cursor">▌</span>
             </div>
 
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Mobile Development</h3>
+            <div class="section-header">
+                <span class="section-eyebrow">// tech_stack</span>
+                <h2 class="section-title">What I work with</h2>
+            </div>
+
+            <div class="skills-list">
+                <div class="skills-row">
+                    <span class="skills-category-label">Mobile</span>
                     <div class="skill-tags">
                         <span class="skill-tag">React Native</span>
                         <span class="skill-tag">Expo</span>
@@ -247,8 +275,8 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Web Technologies</h3>
+                <div class="skills-row">
+                    <span class="skills-category-label">Web</span>
                     <div class="skill-tags">
                         <span class="skill-tag">HTML</span>
                         <span class="skill-tag">CSS</span>
@@ -257,18 +285,17 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
+                <div class="skills-row">
+                    <span class="skills-category-label">Languages</span>
                     <div class="skill-tags">
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">Java</span>
                         <span class="skill-tag">C</span>
-                        <span class="skill-tag">JavaScript</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Tools & Others</h3>
+                <div class="skills-row">
+                    <span class="skills-category-label">Tools</span>
                     <div class="skill-tags">
                         <span class="skill-tag">Git</span>
                         <span class="skill-tag">GitHub</span>
@@ -277,8 +304,8 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Languages</h3>
+                <div class="skills-row">
+                    <span class="skills-category-label">Human lang.</span>
                     <div class="skill-tags">
                         <span class="skill-tag">English</span>
                         <span class="skill-tag">Korean</span>
@@ -286,99 +313,88 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Blog Section -->
-    <section class="blog" id="blog">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Blog</span>
-                <h2 class="section-title">Latest Posts</h2>
-                <p class="section-subtitle">Insights, learnings, and thoughts on software engineering</p>
+        <!-- Blog Section -->
+        <section class="blog" id="blog">
+            <div class="terminal-bar">
+                <span class="tb-user">khk</span><span class="tb-at">@portfolio</span><span class="tb-path"> ~/blog</span>&nbsp;<span class="tb-cmd">$ cat README.md</span><span class="tb-cursor">▌</span>
+            </div>
+
+            <div class="blog-section-header">
+                <div>
+                    <span class="section-eyebrow">// latest_posts</span>
+                    <h2 class="section-title">Latest writing</h2>
+                </div>
+                <a href="blog/" class="text-link">All posts &rarr;</a>
             </div>
 
             <div class="blog-grid" id="blogGrid">
-                <!-- Blog posts will be dynamically loaded here -->
+                <!-- Blog posts loaded dynamically -->
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience" id="experience">
+            <div class="terminal-bar">
+                <span class="tb-user">khk</span><span class="tb-at">@portfolio</span><span class="tb-path"> ~/experience</span>&nbsp;<span class="tb-cmd">$ cat README.md</span><span class="tb-cursor">▌</span>
             </div>
 
-            <div class="blog-see-more" id="blogSeeMore" style="display: none;">
-                <a href="blog/" class="btn btn-secondary">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                    See more posts...
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="experience" id="experience">
-        <div class="container">
             <div class="section-header">
-                <span class="section-label">Experience</span>
-                <h2 class="section-title">My Journey</h2>
-                <p class="section-subtitle">Education and professional experiences</p>
+                <span class="section-eyebrow">// my_journey</span>
+                <h2 class="section-title">My journey so far</h2>
             </div>
 
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3 class="experience-title">Software Engineering Student</h3>
-                        <span class="experience-date">2023 - Present</span>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 – Present</span>
+                        <h3 class="timeline-title">Software Engineering Student</h3>
+                        <p class="timeline-org">Ajou University, South Korea</p>
+                        <p class="timeline-desc">
+                            Pursuing a Bachelor's degree in Software Engineering as a Global Korea Scholarship
+                            recipient. Focusing on algorithms, computer networks, machine learning fundamentals,
+                            and mobile development with React Native.
+                        </p>
                     </div>
-                    <p class="experience-company">Ajou University, South Korea</p>
-                    <p class="experience-description">
-                        Pursuing a Bachelor's degree in Software Engineering as a Global Korea Scholarship recipient.
-                        Focusing on algorithms, computer networks, machine learning fundamentals, and mobile development
-                        with React Native.
-                    </p>
                 </div>
 
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3 class="experience-title">Korean Language Training</h3>
-                        <span class="experience-date">2023</span>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023</span>
+                        <h3 class="timeline-title">Korean Language Training</h3>
+                        <p class="timeline-org">Korea</p>
+                        <p class="timeline-desc">
+                            Completed an intensive Korean language program, achieving TOPIK Level 6
+                            (highest proficiency) in just 10 months through dedicated study and immersion.
+                        </p>
                     </div>
-                    <p class="experience-company">Korea</p>
-                    <p class="experience-description">
-                        Completed intensive Korean language program, achieving TOPIK Level 6 (highest proficiency)
-                        in just 10 months through dedicated study and immersion.
-                    </p>
-                </div>
-
-                <div class="experience-item experience-placeholder">
-                    <div class="experience-header">
-                        <h3 class="experience-title">Looking for Opportunities</h3>
-                        <span class="experience-date">2025+</span>
-                    </div>
-                    <p class="experience-company">Open to internships and collaborations</p>
-                    <p class="experience-description">
-                        I'm actively seeking internship opportunities in mobile development, machine learning,
-                        or general software engineering. Let's build something amazing together!
-                    </p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Contact</span>
-                <h2 class="section-title">Let's Connect</h2>
-                <p class="section-subtitle">I'm always interested in new opportunities and collaborations</p>
+            <p class="experience-cta">
+                Currently seeking internship opportunities in mobile development or machine learning.
+                <a href="#contact">Let's talk &rarr;</a>
+            </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="terminal-bar">
+                <span class="tb-user">khk</span><span class="tb-at">@portfolio</span><span class="tb-path"> ~/contact</span>&nbsp;<span class="tb-cmd">$ cat README.md</span><span class="tb-cursor">▌</span>
             </div>
 
             <div class="contact-content">
+                <span class="section-eyebrow">// let's_connect</span>
+                <h2 class="section-title">Let's Connect</h2>
                 <p class="contact-text">
                     Whether you have a project in mind, want to collaborate, or just want to say hello,
                     feel free to reach out.
                 </p>
 
-                <a href="mailto:kaunghtetkopma@gmail.com" class="contact-email">
+                <a href="mailto:kaunghtetkopma@gmail.com" class="contact-email-link">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                         <polyline points="22,6 12,13 2,6" />
@@ -389,29 +405,27 @@
                 <div class="contact-social">
                     <a href="https://github.com/kaunghko" class="social-link" title="GitHub" aria-label="GitHub"
                         target="_blank" rel="noopener noreferrer">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                             <path
                                 d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                         </svg>
+                        github.com/kaunghko
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
+        <!-- Footer -->
+        <footer class="footer">
             <div class="footer-content">
                 <p class="footer-text">
                     © 2025 <a href="#">Kaung Htet Ko</a>. All rights reserved.
                 </p>
-                <p class="footer-text">
-                    Built with ⚡️
-                </p>
+                <p class="footer-text">Built with ⚡️ — Myanmar → 🇰🇷</p>
             </div>
-        </div>
-    </footer>
+        </footer>
+
+    </main>
 
     <!-- Scroll to Top Button -->
     <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
@@ -422,109 +436,61 @@
 
     <!-- JavaScript -->
     <script>
-        // Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const sunIcon = document.getElementById('sunIcon');
-        const moonIcon = document.getElementById('moonIcon');
-        const body = document.body;
+        /* ── Mobile Sidebar ──────────────────── */
+        const sidebar        = document.getElementById('sidebar');
+        const sidebarToggle  = document.getElementById('sidebarToggle');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
 
-        // Check for saved theme preference or default to dark
-        const savedTheme = localStorage.getItem('theme') || localStorage.getItem('pref-theme') || 'dark';
-        if (savedTheme === 'light') {
-            body.classList.add('light');
-            sunIcon.style.display = 'block';
-            moonIcon.style.display = 'none';
-            localStorage.setItem('pref-theme', 'light');
-        } else {
-            sunIcon.style.display = 'none';
-            moonIcon.style.display = 'block';
-            localStorage.setItem('pref-theme', 'dark');
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            sidebarOverlay.classList.toggle('visible');
+        });
+
+        sidebarOverlay.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+            sidebarOverlay.classList.remove('visible');
+        });
+
+        /* ── Sidebar Active Nav ──────────────── */
+        const navBtns = document.querySelectorAll('.sidebar-nav-btn');
+
+        function setActiveNav(sectionId) {
+            navBtns.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.section === sectionId);
+            });
         }
 
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('light');
-            const isLight = body.classList.contains('light');
-
-            if (isLight) {
-                sunIcon.style.display = 'block';
-                moonIcon.style.display = 'none';
-                localStorage.setItem('theme', 'light');
-                localStorage.setItem('pref-theme', 'light');
-            } else {
-                sunIcon.style.display = 'none';
-                moonIcon.style.display = 'block';
-                localStorage.setItem('theme', 'dark');
-                localStorage.setItem('pref-theme', 'dark');
-            }
-        });
-
-        // Mobile Navigation Toggle
-        const navToggle = document.getElementById('navToggle');
-        const navLinks = document.getElementById('navLinks');
-
-        navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) setActiveNav(entry.target.id);
             });
-        });
+        }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
 
-        // Scroll to Top Button
-        const scrollTopBtn = document.getElementById('scrollTop');
+        document.querySelectorAll('section[id]').forEach(s => sectionObserver.observe(s));
 
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                scrollTopBtn.classList.add('visible');
-            } else {
-                scrollTopBtn.classList.remove('visible');
-            }
-        });
-
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Navbar background on scroll
-        const navbar = document.getElementById('navbar');
-
-        function handleScroll() {
-            if (window.pageYOffset > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        }
-
-        window.addEventListener('scroll', handleScroll);
-        handleScroll();
-
-        // Smooth scroll for anchor links
+        /* ── Smooth scroll + close mobile nav ── */
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+                sidebar.classList.remove('open');
+                sidebarOverlay.classList.remove('visible');
             });
         });
 
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
+        /* ── Scroll to Top ───────────────────── */
+        const scrollTopBtn = document.getElementById('scrollTop');
 
+        window.addEventListener('scroll', () => {
+            scrollTopBtn.classList.toggle('visible', window.pageYOffset > 300);
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        /* ── Scroll Animations ───────────────── */
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -532,63 +498,49 @@
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.08 });
 
-        // Observe section elements for scroll animations
         document.querySelectorAll('section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(section);
+            if (!section.classList.contains('hero')) {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            }
         });
 
-        // Make hero visible immediately
-        document.querySelector('.hero').style.opacity = '1';
-        document.querySelector('.hero').style.transform = 'translateY(0)';
-
-        // Dynamic Blog Loading
-        const MAX_POSTS_DISPLAYED = 4;
-        const blogGrid = document.getElementById('blogGrid');
-        const blogSeeMore = document.getElementById('blogSeeMore');
-        const MAX_PROJECTS_DISPLAYED = 4;
-        const projectsGrid = document.getElementById('projectsGrid');
+        /* ── Dynamic Content Loading ─────────── */
+        const blogGrid      = document.getElementById('blogGrid');
+        const projectsGrid  = document.getElementById('projectsGrid');
         const projectsSeeMore = document.getElementById('projectsSeeMore');
+
+        const CARD_COLORS = ['#e94560', '#06d6a0', '#00d4ff', '#ffd166', '#9b72ff'];
 
         async function loadBlogPosts() {
             try {
                 const response = await fetch('blog/posts.json');
                 const posts = await response.json();
 
-                // Sort posts by date (most recent first)
                 posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+                const postsToShow = posts.slice(0, 4);
+                const color = '#00d4ff';
 
-                // Display only the first 3 posts
-                const postsToShow = posts.slice(0, MAX_POSTS_DISPLAYED);
-
-                // Create blog cards HTML
                 blogGrid.innerHTML = postsToShow.map(post => `
-                    <article class="blog-card">
-                        <div class="blog-card-content">
-                            <div class="blog-card-meta">
-                                <span class="blog-card-date">${post.displayDate}</span>
-                                <span class="blog-card-tag">${post.tag}</span>
-                            </div>
-                            <h3 class="blog-card-title">
-                                <a href="blog/${post.slug}/index.html">${post.title}</a>
-                            </h3>
-                            <p class="blog-card-excerpt">${post.excerpt}</p>
+                    <article class="proj-card" style="--card-accent: ${color}">
+                        <a href="blog/${post.slug}/index.html" style="text-decoration:none;color:inherit;display:contents">
+                        <div class="proj-card-meta">
+                            <span class="proj-card-date">${post.displayDate}</span>
+                            <span class="proj-card-tag">${post.tag}</span>
                         </div>
+                        <h3 class="proj-card-title">${post.title}</h3>
+                        <p class="proj-card-excerpt">${post.excerpt}</p>
+                        <span class="proj-card-arrow">↗</span>
+                        </a>
                     </article>
                 `).join('');
-
-                // Show "See more" button if there are more than 3 posts
-                if (posts.length > MAX_POSTS_DISPLAYED) {
-                    blogSeeMore.style.display = 'flex';
-                }
             } catch (error) {
                 console.error('Error loading blog posts:', error);
-                // Fallback: keep the grid empty or show error message
-                blogGrid.innerHTML = '<p style="text-align: center; color: var(--text-secondary);">Unable to load blog posts.</p>';
+                blogGrid.innerHTML = '<p style="color:rgba(240,244,255,0.4);font-family:var(--font-mono);font-size:13px">Unable to load blog posts.</p>';
             }
         }
 
@@ -597,36 +549,33 @@
                 const response = await fetch('projects/posts.json');
                 const projects = await response.json();
 
-                // Sort by updated date (most recent first)
                 projects.sort((a, b) => new Date(b.date) - new Date(a.date));
+                const projectsToShow = projects.slice(0, 4);
 
-                const projectsToShow = projects.slice(0, MAX_PROJECTS_DISPLAYED);
-
-                projectsGrid.innerHTML = projectsToShow.map(project => `
-                    <article class="blog-card">
-                        <a class="project-card-link" href="projects/${project.slug}/index.html" aria-label="Open project: ${project.title}">
-                            <div class="blog-card-content">
-                                <div class="blog-card-meta">
-                                    <span class="blog-card-date">${project.displayDate}</span>
-                                    <span class="blog-card-tag">${project.tag}</span>
-                                </div>
-                                <h3 class="blog-card-title">${project.title}</h3>
-                                <p class="blog-card-excerpt">${project.excerpt}</p>
-                            </div>
+                projectsGrid.innerHTML = projectsToShow.map((project, i) => {
+                    const color = CARD_COLORS[i % CARD_COLORS.length];
+                    return `
+                    <article class="proj-card" style="--card-accent: ${color}">
+                        <a href="projects/${project.slug}/index.html" style="text-decoration:none;color:inherit;display:contents">
+                        <div class="proj-card-meta">
+                            <span class="proj-card-date">${project.displayDate}</span>
+                            <span class="proj-card-tag" style="color:${color};background:${color}22;border-color:${color}44">${project.tag}</span>
+                        </div>
+                        <h3 class="proj-card-title">${project.title}</h3>
+                        <p class="proj-card-excerpt">${project.excerpt}</p>
+                        <span class="proj-card-arrow">↗</span>
                         </a>
                     </article>
-                `).join('');
+                    `;
+                }).join('');
 
-                if (projects.length > MAX_PROJECTS_DISPLAYED) {
-                    projectsSeeMore.style.display = 'flex';
-                }
+                if (projects.length > 4) projectsSeeMore.style.display = 'flex';
             } catch (error) {
                 console.error('Error loading projects:', error);
-                projectsGrid.innerHTML = '<p style="text-align: center; color: var(--text-secondary);">Unable to load projects.</p>';
+                projectsGrid.innerHTML = '<p style="color:rgba(240,244,255,0.4);font-family:var(--font-mono);font-size:13px">Unable to load projects.</p>';
             }
         }
 
-        // Load blog posts on page load
         loadBlogPosts();
         loadProjects();
     </script>

@@ -9,7 +9,7 @@
         content="Browse all current projects by Kaung Htet Ko, including mobile development and portfolio improvements.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -101,20 +101,23 @@
 
                 projects.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-                allProjectsGrid.innerHTML = projects.map(project => `
-                    <article class="blog-card">
-                        <a class="project-card-link" href="${project.slug}/index.html" aria-label="Open project: ${project.title}">
-                            <div class="blog-card-content">
-                                <div class="blog-card-meta">
-                                    <span class="blog-card-date">${project.displayDate}</span>
-                                    <span class="blog-card-tag">${project.tag}</span>
-                                </div>
-                                <h3 class="blog-card-title">${project.title}</h3>
-                                <p class="blog-card-excerpt">${project.excerpt}</p>
-                            </div>
+                const COLORS = ['#e94560', '#06d6a0', '#00d4ff', '#ffd166', '#9b72ff'];
+                allProjectsGrid.innerHTML = projects.map((project, i) => {
+                    const color = COLORS[i % COLORS.length];
+                    return `
+                    <article class="proj-card" style="--card-accent: ${color}">
+                        <a href="${project.slug}/index.html" aria-label="${project.title}" style="text-decoration:none;color:inherit;display:contents">
+                        <div class="proj-card-meta">
+                            <span class="proj-card-date">${project.displayDate}</span>
+                            <span class="proj-card-tag" style="color:${color};background:${color}22;border-color:${color}44">${project.tag}</span>
+                        </div>
+                        <h3 class="proj-card-title">${project.title}</h3>
+                        <p class="proj-card-excerpt">${project.excerpt}</p>
+                        <span class="proj-card-arrow">↗</span>
                         </a>
                     </article>
-                `).join('');
+                    `;
+                }).join('');
             } catch (error) {
                 console.error('Error loading projects:', error);
                 allProjectsGrid.innerHTML = '<p style="text-align: center; color: var(--text-secondary);">Unable to load projects.</p>';
