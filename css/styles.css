@@ -404,7 +404,7 @@ section:last-of-type { border-bottom: none; }
 .hero-greeting {
     font-family: var(--font-mono);
     font-size: 13px;
-    color: var(--pink);
+    color: var(--cyan);
     opacity: 0.8;
     margin-bottom: 12px;
 }
