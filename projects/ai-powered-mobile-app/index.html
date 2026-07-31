@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI-Powered Mobile App | Kaung Htet Ko</title>
+    <title>MANFO - AI-Powered Disaster Reporting Platform | Kaung Htet Ko</title>
     <meta name="description"
-        content="Overview of my AI-powered mobile app project built with React Native and practical AI-first workflows.">
+        content="MANFO: AI-powered disaster reporting platform with React Native, Gemini AI, Whisper voice transcription, and multi-channel support (Telegram, LINE) in 3 languages.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -55,34 +55,59 @@
             </a>
 
             <header class="post-header">
-                <h1 class="post-title">AI-Powered Mobile App</h1>
-                <p class="post-meta">March 8, 2026 · In Progress · Kaung Htet Ko</p>
+                <h1 class="post-title">MANFO - AI-Powered Disaster Reporting Platform</h1>
+                <p class="post-meta">March 8, 2026 · Completed · Kaung Htet Ko</p>
             </header>
 
-            <p>This project focuses on building a practical mobile app with <strong>React Native</strong> and integrating
-                <strong>AI-powered features</strong> that are useful in daily life.
+            <p>A multilingual disaster reporting and response system integrating <strong>AI image analysis</strong>,
+                <strong>voice transcription</strong>, and <strong>real-time incident mapping</strong> across Telegram, LINE,
+                and native mobile apps (iOS + Android). Built to serve disaster-affected populations without language
+                barriers.
             </p>
 
-            <h3>Current Focus</h3>
+            <h3>Key Features</h3>
             <ul>
-                <li>Designing a clean and fast onboarding flow.</li>
-                <li>Testing AI-assisted task suggestions for better user productivity.</li>
-                <li>Improving mobile performance and offline reliability.</li>
+                <li>AI-powered incident reporting via image analysis (Gemini 2.5/3.1 Flash Lite)</li>
+                <li>Voice-to-text transcription for hands-free reporting (Whisper large-v3)</li>
+                <li>Real-time incident map with location-based filtering (Google Maps API)</li>
+                <li>Emergency Unit Dashboard with role-based access control (RBAC)</li>
+                <li>3-language support: Korean, English, Burmese</li>
+                <li>Multi-channel: Telegram Bot, LINE Bot, React Native mobile app</li>
             </ul>
 
             <h3>Tech Stack</h3>
             <ul>
-                <li>React Native + Expo</li>
-                <li>TypeScript</li>
-                <li>Firebase (auth + data)</li>
+                <li><strong>Frontend:</strong> React Native + Expo, TypeScript</li>
+                <li><strong>Backend:</strong> Node.js + Express.js, Firebase (Firestore, Storage, Auth, Admin SDK)</li>
+                <li><strong>AI:</strong> Gemini 2.5/3.1 Flash Lite, Whisper (whisper-large-v3), Llama models</li>
+                <li><strong>Infrastructure:</strong> Google Cloud Run, Docker, Google Maps API</li>
+                <li><strong>Security:</strong> RBAC, Firebase security rules, ZXCVBN password strength</li>
             </ul>
 
-            <h3>Next Milestones</h3>
-            <ol>
-                <li>Finalize the first functional prototype.</li>
-                <li>Run small user tests and gather feedback.</li>
-                <li>Iterate on the AI prompt and recommendation quality.</li>
-            </ol>
+            <h3>Engineering Practices Learned</h3>
+            <ul>
+                <li>Git branching strategy (<code>feature/</code> naming) and PR review process</li>
+                <li>NoSQL denormalization for query performance with composite indexes</li>
+                <li>State machine (FSM) for managing async multi-channel conversations</li>
+                <li>Defensive coding for handling unexpected AI responses</li>
+                <li>Cost optimization: Google Cloud monitoring, API call minimization, response caching</li>
+            </ul>
+
+            <h3>Deliverables</h3>
+            <ul>
+                <li>Telegram Bot (AI-powered disaster reporting)</li>
+                <li>LINE Bot (multi-channel support)</li>
+                <li>Mobile App (iOS + Android, App Store + Play Store deployed)</li>
+                <li>Emergency Unit Dashboard (admin panel)</li>
+                <li>Real-time incident map with filtering</li>
+            </ul>
+
+            <h3>Key Insights</h3>
+            <ul>
+                <li>"The key is how you design and manage data" — data structure affects query performance and scalability</li>
+                <li>Generating consistent JSON from LLM requires careful prompt design; defensive parsing is essential</li>
+                <li>Supporting Korean, English, and Burmese showed how technology can serve disaster-affected populations without language barriers</li>
+            </ul>
         </article>
     </main>
 
