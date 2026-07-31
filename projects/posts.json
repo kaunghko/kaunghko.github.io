@@ -1,11 +1,11 @@
 [
   {
     "slug": "ai-powered-mobile-app",
-    "title": "AI-Powered Mobile App",
+    "title": "MANFO - AI-Powered Disaster Reporting Platform",
     "date": "2026-03-08",
     "displayDate": "March 8, 2026",
-    "tag": "In Progress",
-    "excerpt": "Building a React Native app with AI features focused on solving practical day-to-day problems.",
+    "tag": "Completed",
+    "excerpt": "Multilingual disaster reporting system with AI image analysis, voice transcription, and real-time incident mapping across Telegram, LINE, and mobile apps.",
     "readTime": "3 min read"
   },
   {
