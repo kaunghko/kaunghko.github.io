@@ -1,20 +1,28 @@
 [
   {
     "slug": "ai-powered-mobile-app",
-    "title": "MANFO - AI-Powered Disaster Reporting Platform",
+    "title": "MANFO",
+    "subtitle": "AI-Powered Disaster Reporting Platform",
     "date": "2026-03-08",
     "displayDate": "March 8, 2026",
     "tag": "Completed",
     "excerpt": "Multilingual disaster reporting system with AI image analysis, voice transcription, and real-time incident mapping across Telegram, LINE, and mobile apps.",
-    "readTime": "3 min read"
+    "readTime": "3 min read",
+    "techStack": ["React Native", "Expo", "Firebase", "Gemini AI", "Whisper", "Google Maps"],
+    "heroImage": "assets/projects/manfo-hero.svg",
+    "screenshots": []
   },
   {
     "slug": "personal-blog-improvements",
-    "title": "Personal Blog Improvements",
+    "title": "Personal Blog",
+    "subtitle": "Portfolio & Blog Improvements",
     "date": "2026-03-07",
     "displayDate": "March 7, 2026",
     "tag": "Website",
     "excerpt": "Continuously improving this portfolio and blog with better structure, readability, and user experience.",
-    "readTime": "2 min read"
+    "readTime": "2 min read",
+    "techStack": ["HTML", "CSS", "JavaScript"],
+    "heroImage": "assets/projects/blog-hero.svg",
+    "screenshots": []
   }
 ]

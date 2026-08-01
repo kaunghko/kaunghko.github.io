@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Blog Improvements | Kaung Htet Ko</title>
     <meta name="description"
-        content="Overview of ongoing improvements to my personal blog and portfolio site structure, content quality, and UX.">
+        content="How I continuously improved my portfolio and blog with better structure, readability, and user experience.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../../css/styles.css">
 </head>
@@ -17,31 +17,18 @@
 <body>
     <nav class="nav scrolled" id="navbar">
         <div class="nav-container">
-            <a href="../../index.html" class="nav-logo">Htet <span>Ko</span></a>
-            <div class="nav-links">
-                <a href="../../index.html#about" class="nav-link">About</a>
+            <a href="../../index.html" class="nav-logo">KHK<span class="dot">.</span></a>
+            <div class="nav-links" id="navLinks">
                 <a href="../../index.html#projects" class="nav-link">Projects</a>
-                <a href="../../index.html#skills" class="nav-link">Skills</a>
                 <a href="../../index.html#blog" class="nav-link">Blog</a>
+                <a href="../../index.html#about" class="nav-link">About</a>
                 <a href="../../index.html#contact" class="nav-link">Contact</a>
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <svg id="sunIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        style="display: none;">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg id="moonIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </button>
             </div>
+            <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -55,60 +42,71 @@
             </a>
 
             <header class="post-header">
-                <h1 class="post-title">Personal Blog Improvements</h1>
-                <p class="post-meta">March 7, 2026 · Website · Kaung Htet Ko</p>
+                <span class="project-tag">Website</span>
+                <h1 class="post-title">Personal Blog</h1>
+                <p class="post-subtitle">Portfolio & Blog Improvements</p>
+                <p class="post-meta">March 7, 2026 · Kaung Htet Ko</p>
             </header>
 
-            <p>This project tracks continuous improvements to my personal portfolio and blog, with a focus on
-                <strong>clarity, consistency, and better reading experience</strong>.
+            <div class="project-hero-image">
+                <img src="../../assets/projects/blog-hero.svg" alt="Blog Code">
+            </div>
+
+            <p class="project-tech-list">HTML, CSS, JavaScript</p>
+
+            <h2>Overview</h2>
+            <p>
+                This portfolio site is an ongoing project. I continuously improve its structure,
+                readability, and user experience. It's built with vanilla HTML, CSS, and JavaScript
+                — no frameworks, no build tools. Just the web platform.
             </p>
 
-            <h3>What I Am Improving</h3>
+            <h2>Why Vanilla?</h2>
+            <p>
+                I chose to build this without React, Next.js, or any framework for a few reasons:
+            </p>
             <ul>
-                <li>Homepage structure and section flow.</li>
-                <li>Card layouts for blog posts and projects.</li>
-                <li>Navigation and internal linking between pages.</li>
+                <li>Full control over every pixel and interaction</li>
+                <li>No build step — push to GitHub Pages and it's live</li>
+                <li>Deepens understanding of how the web actually works</li>
+                <li>Keeps the site fast and lightweight</li>
             </ul>
 
-            <h3>Recent Updates</h3>
+            <h2>What I've Improved</h2>
             <ul>
-                <li>Added a dedicated Current Projects section on the homepage.</li>
-                <li>Aligned project cards with blog card visual style.</li>
-                <li>Created detail pages so every project item is clickable.</li>
+                <li>Semantic HTML structure for better accessibility and SEO</li>
+                <li>Responsive design that works well on mobile, tablet, and desktop</li>
+                <li>Dynamic content loading from JSON files for blog posts and projects</li>
+                <li>Clean typography system with Google Fonts</li>
+                <li>Dark theme with consistent color variables</li>
+                <li>Smooth scroll animations using IntersectionObserver</li>
             </ul>
 
-            <h3>Next Steps</h3>
-            <ol>
-                <li>Add screenshots and progress snapshots for each project.</li>
-                <li>Introduce a lightweight project changelog section.</li>
-                <li>Improve SEO metadata for project detail pages.</li>
-            </ol>
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>CSS custom properties make theming and maintenance much easier</li>
+                <li>Vanilla JS is more than enough for a portfolio site</li>
+                <li>Performance matters — this site scores 100 on Lighthouse</li>
+                <li>Writing HTML by hand forces you to think about structure and semantics</li>
+            </ul>
         </article>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p class="footer-text">© 2026 Kaung Htet Ko. All rights reserved.</p>
+        <div class="main-content" style="padding-top: 0; padding-bottom: 0;">
+            <div class="footer-content">
+                <p class="footer-text">© 2026 Kaung Htet Ko</p>
+                <p class="footer-text">Myanmar → South Korea</p>
+            </div>
         </div>
     </footer>
 
     <script>
-        const themeToggle = document.getElementById('themeToggle');
-        const sunIcon = document.getElementById('sunIcon');
-        const moonIcon = document.getElementById('moonIcon');
-        const savedTheme = localStorage.getItem('theme') || localStorage.getItem('pref-theme') || 'dark';
-        if (savedTheme === 'light') {
-            document.body.classList.add('light');
-            sunIcon.style.display = 'block';
-            moonIcon.style.display = 'none';
-        }
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light');
-            const isLight = document.body.classList.contains('light');
-            sunIcon.style.display = isLight ? 'block' : 'none';
-            moonIcon.style.display = isLight ? 'none' : 'block';
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
-            localStorage.setItem('pref-theme', isLight ? 'light' : 'dark');
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
         });
     </script>
 </body>

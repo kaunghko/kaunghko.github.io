@@ -9,7 +9,7 @@
         content="How I set up a custom domain for my GitHub Pages site using Namecheap. Complete step-by-step guide.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../../css/styles.css">
 </head>
@@ -17,30 +17,18 @@
 <body>
     <nav class="nav scrolled" id="navbar">
         <div class="nav-container">
-            <a href="../../index.html" class="nav-logo">Htet <span>Ko</span></a>
-            <div class="nav-links">
+            <a href="../../index.html" class="nav-logo">KHK<span class="dot">.</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="../../index.html#projects" class="nav-link">Projects</a>
+                <a href="../../index.html#blog" class="nav-link active">Blog</a>
                 <a href="../../index.html#about" class="nav-link">About</a>
-                <a href="../../index.html#skills" class="nav-link">Skills</a>
-                <a href="../../index.html#blog" class="nav-link">Blog</a>
                 <a href="../../index.html#contact" class="nav-link">Contact</a>
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <svg id="sunIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        style="display: none;">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg id="moonIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </button>
             </div>
+            <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -62,42 +50,42 @@
                 it's available at <code>kaunghtetko.com</code>. Here's the process I followed using Namecheap and GitHub
                 Pages.</p>
 
-            <h3>Overview</h3>
+            <h2>Overview</h2>
             <ul>
                 <li><strong>Domain registrar</strong>: Namecheap</li>
                 <li><strong>Host</strong>: GitHub Pages</li>
                 <li><strong>Result</strong>: <code>kaunghtetko.com</code> with HTTPS and <code>www</code> redirect</li>
             </ul>
 
-            <h3>Prerequisites</h3>
+            <h2>Prerequisites</h2>
             <ul>
                 <li>A working GitHub Pages site (either <code>username.github.io</code> or a repo with Pages enabled).
                 </li>
                 <li>Access to your domain's DNS settings in Namecheap.</li>
             </ul>
 
-            <h3>Step 1 — Purchase your domain (Namecheap)</h3>
+            <h2>Step 1 — Purchase your domain (Namecheap)</h2>
             <ol>
                 <li>Search for your desired domain on Namecheap and add it to cart.</li>
                 <li>Complete checkout and create/sign in to your account.</li>
                 <li>Verify your email if prompted.</li>
             </ol>
 
-            <h3>Step 2 — Confirm your GitHub Pages site</h3>
+            <h2>Step 2 — Confirm your GitHub Pages site</h2>
             <ol>
                 <li>Ensure your site builds and is publicly accessible.</li>
                 <li>If using a user/organization site, it should be at <code>https://username.github.io</code>.</li>
                 <li>If using a project site, verify its current Pages URL loads correctly.</li>
             </ol>
 
-            <h3>Step 3 — Set the custom domain in GitHub</h3>
+            <h2>Step 3 — Set the custom domain in GitHub</h2>
             <ol>
                 <li>Open your repository → <code>Settings</code> → <code>Pages</code>.</li>
                 <li>Under "Custom domain," enter your domain.</li>
                 <li>Click <code>Save</code> and enable "Enforce HTTPS" once available.</li>
             </ol>
 
-            <h3>Step 4 — Configure DNS in Namecheap</h3>
+            <h2>Step 4 — Configure DNS in Namecheap</h2>
             <p>Open <code>Domain List</code> → <code>Manage</code> → <code>Advanced DNS</code>, then add:</p>
             <p>For the apex domain:</p>
             <pre>
@@ -108,14 +96,14 @@ Type: A Record   Host: @   Value: 185.199.111.153</pre>
             <p>For the www subdomain:</p>
             <pre>Type: CNAME Record   Host: www   Value: kaunghko.github.io</pre>
 
-            <h3>Step 5 — Propagation and verification</h3>
+            <h2>Step 5 — Propagation and verification</h2>
             <ol>
                 <li>DNS may take up to 24–48 hours to propagate (often much faster).</li>
                 <li>Test both your domain and www subdomain.</li>
                 <li>Confirm the lock icon (HTTPS) appears once certificates finish provisioning.</li>
             </ol>
 
-            <h3>Troubleshooting</h3>
+            <h2>Troubleshooting</h2>
             <ul>
                 <li><strong>No site yet?</strong> Wait longer for DNS propagation and TLS issuance.</li>
                 <li><strong>Pages disabled/private?</strong> Ensure the repo is public and Pages is enabled.</li>
@@ -127,28 +115,20 @@ Type: A Record   Host: @   Value: 185.199.111.153</pre>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p class="footer-text">© 2025 Kaung Htet Ko. All rights reserved.</p>
+        <div class="main-content" style="padding-top: 0; padding-bottom: 0;">
+            <div class="footer-content">
+                <p class="footer-text">© 2026 Kaung Htet Ko</p>
+                <p class="footer-text">Myanmar → South Korea</p>
+            </div>
         </div>
     </footer>
 
     <script>
-        const themeToggle = document.getElementById('themeToggle');
-        const sunIcon = document.getElementById('sunIcon');
-        const moonIcon = document.getElementById('moonIcon');
-        const savedTheme = localStorage.getItem('theme') || localStorage.getItem('pref-theme') || 'dark';
-        if (savedTheme === 'light') {
-            document.body.classList.add('light');
-            sunIcon.style.display = 'block';
-            moonIcon.style.display = 'none';
-        }
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light');
-            const isLight = document.body.classList.contains('light');
-            sunIcon.style.display = isLight ? 'block' : 'none';
-            moonIcon.style.display = isLight ? 'none' : 'block';
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
-            localStorage.setItem('pref-theme', isLight ? 'light' : 'dark');
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
         });
     </script>
 </body>

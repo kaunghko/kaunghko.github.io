@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MANFO - AI-Powered Disaster Reporting Platform | Kaung Htet Ko</title>
     <meta name="description"
-        content="MANFO: AI-powered disaster reporting platform with React Native, Gemini AI, Whisper voice transcription, and multi-channel support (Telegram, LINE) in 3 languages.">
+        content="MANFO: AI-powered disaster reporting platform with React Native, Gemini AI, Whisper voice transcription, and multi-channel support in 3 languages.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../../css/styles.css">
 </head>
@@ -17,31 +17,18 @@
 <body>
     <nav class="nav scrolled" id="navbar">
         <div class="nav-container">
-            <a href="../../index.html" class="nav-logo">Htet <span>Ko</span></a>
-            <div class="nav-links">
-                <a href="../../index.html#about" class="nav-link">About</a>
+            <a href="../../index.html" class="nav-logo">KHK<span class="dot">.</span></a>
+            <div class="nav-links" id="navLinks">
                 <a href="../../index.html#projects" class="nav-link">Projects</a>
-                <a href="../../index.html#skills" class="nav-link">Skills</a>
                 <a href="../../index.html#blog" class="nav-link">Blog</a>
+                <a href="../../index.html#about" class="nav-link">About</a>
                 <a href="../../index.html#contact" class="nav-link">Contact</a>
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <svg id="sunIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        style="display: none;">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg id="moonIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </button>
             </div>
+            <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -55,14 +42,53 @@
             </a>
 
             <header class="post-header">
-                <h1 class="post-title">MANFO - AI-Powered Disaster Reporting Platform</h1>
-                <p class="post-meta">March 8, 2026 · Completed · Kaung Htet Ko</p>
+                <span class="project-tag">Completed</span>
+                <h1 class="post-title">MANFO</h1>
+                <p class="post-subtitle">AI-Powered Disaster Reporting Platform</p>
+                <p class="post-meta">March 8, 2026 · Kaung Htet Ko</p>
             </header>
 
-            <p>A multilingual disaster reporting and response system integrating <strong>AI image analysis</strong>,
+            <div class="project-hero-image">
+                <img src="../../assets/projects/manfo-hero.svg" alt="MANFO Dashboard">
+            </div>
+
+            <p class="project-tech-list">React Native, Expo, Firebase, Gemini AI, Whisper, Google Maps</p>
+
+            <div class="project-metrics">
+                <div class="project-metric">
+                    <div class="project-metric-value">3</div>
+                    <div class="project-metric-label">Languages Supported</div>
+                </div>
+                <div class="project-metric">
+                    <div class="project-metric-value">3</div>
+                    <div class="project-metric-label">Channels (Telegram, LINE, App)</div>
+                </div>
+                <div class="project-metric">
+                    <div class="project-metric-value">2</div>
+                    <div class="project-metric-label">AI Models Integrated</div>
+                </div>
+            </div>
+
+            <h2>Overview</h2>
+            <p>
+                A multilingual disaster reporting and response system integrating <strong>AI image analysis</strong>,
                 <strong>voice transcription</strong>, and <strong>real-time incident mapping</strong> across Telegram, LINE,
                 and native mobile apps (iOS + Android). Built to serve disaster-affected populations without language
                 barriers.
+            </p>
+
+            <h2>The Problem</h2>
+            <p>
+                In disaster situations, language barriers can prevent people from reporting incidents or accessing
+                help. Existing systems often support only one language and require typing — which is difficult
+                during emergencies.
+            </p>
+
+            <h2>The Solution</h2>
+            <p>
+                MANFO enables disaster reporting through multiple channels (Telegram bot, LINE bot, and a native
+                mobile app) with support for Korean, English, and Burmese. Users can report incidents by taking
+                a photo (AI analyzes the image) or recording voice messages (transcribed automatically).
             </p>
 
             <h3>Key Features</h3>
@@ -71,11 +97,10 @@
                 <li>Voice-to-text transcription for hands-free reporting (Whisper large-v3)</li>
                 <li>Real-time incident map with location-based filtering (Google Maps API)</li>
                 <li>Emergency Unit Dashboard with role-based access control (RBAC)</li>
-                <li>3-language support: Korean, English, Burmese</li>
                 <li>Multi-channel: Telegram Bot, LINE Bot, React Native mobile app</li>
             </ul>
 
-            <h3>Tech Stack</h3>
+            <h2>Tech Stack</h2>
             <ul>
                 <li><strong>Frontend:</strong> React Native + Expo, TypeScript</li>
                 <li><strong>Backend:</strong> Node.js + Express.js, Firebase (Firestore, Storage, Auth, Admin SDK)</li>
@@ -84,7 +109,7 @@
                 <li><strong>Security:</strong> RBAC, Firebase security rules, ZXCVBN password strength</li>
             </ul>
 
-            <h3>Engineering Practices Learned</h3>
+            <h2>Engineering Practices Learned</h2>
             <ul>
                 <li>Git branching strategy (<code>feature/</code> naming) and PR review process</li>
                 <li>NoSQL denormalization for query performance with composite indexes</li>
@@ -93,7 +118,14 @@
                 <li>Cost optimization: Google Cloud monitoring, API call minimization, response caching</li>
             </ul>
 
-            <h3>Deliverables</h3>
+            <h2>Key Insights</h2>
+            <ul>
+                <li>"The key is how you design and manage data" — data structure affects query performance and scalability</li>
+                <li>Generating consistent JSON from LLM requires careful prompt design; defensive parsing is essential</li>
+                <li>Supporting Korean, English, and Burmese showed how technology can serve disaster-affected populations without language barriers</li>
+            </ul>
+
+            <h2>Deliverables</h2>
             <ul>
                 <li>Telegram Bot (AI-powered disaster reporting)</li>
                 <li>LINE Bot (multi-channel support)</li>
@@ -101,39 +133,24 @@
                 <li>Emergency Unit Dashboard (admin panel)</li>
                 <li>Real-time incident map with filtering</li>
             </ul>
-
-            <h3>Key Insights</h3>
-            <ul>
-                <li>"The key is how you design and manage data" — data structure affects query performance and scalability</li>
-                <li>Generating consistent JSON from LLM requires careful prompt design; defensive parsing is essential</li>
-                <li>Supporting Korean, English, and Burmese showed how technology can serve disaster-affected populations without language barriers</li>
-            </ul>
         </article>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p class="footer-text">© 2026 Kaung Htet Ko. All rights reserved.</p>
+        <div class="main-content" style="padding-top: 0; padding-bottom: 0;">
+            <div class="footer-content">
+                <p class="footer-text">© 2026 Kaung Htet Ko</p>
+                <p class="footer-text">Myanmar → South Korea</p>
+            </div>
         </div>
     </footer>
 
     <script>
-        const themeToggle = document.getElementById('themeToggle');
-        const sunIcon = document.getElementById('sunIcon');
-        const moonIcon = document.getElementById('moonIcon');
-        const savedTheme = localStorage.getItem('theme') || localStorage.getItem('pref-theme') || 'dark';
-        if (savedTheme === 'light') {
-            document.body.classList.add('light');
-            sunIcon.style.display = 'block';
-            moonIcon.style.display = 'none';
-        }
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light');
-            const isLight = document.body.classList.contains('light');
-            sunIcon.style.display = isLight ? 'block' : 'none';
-            moonIcon.style.display = isLight ? 'none' : 'block';
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
-            localStorage.setItem('pref-theme', isLight ? 'light' : 'dark');
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
         });
     </script>
 </body>
