@@ -5,7 +5,8 @@
     "date": "2025-09-07",
     "displayDate": "September 7, 2025",
     "tag": "Tutorial",
-    "excerpt": "How I set up a custom domain for my GitHub Pages site using Namecheap. Complete step-by-step guide included."
+    "excerpt": "How I set up a custom domain for my GitHub Pages site using Namecheap. Complete step-by-step guide included.",
+    "public": true
   },
   {
     "slug": "weekly-learnings-2",
@@ -13,7 +14,8 @@
     "date": "2025-09-06",
     "displayDate": "September 6, 2025",
     "tag": "Reflection",
-    "excerpt": "Course progress, challenges with formula derivations, and goals for the upcoming week."
+    "excerpt": "Course progress, challenges with formula derivations, and goals for the upcoming week.",
+    "public": true
   },
   {
     "slug": "weekly-learnings-1",
@@ -21,7 +23,8 @@
     "date": "2025-09-06",
     "displayDate": "September 6, 2025",
     "tag": "Reflection",
-    "excerpt": "Course overview for the new semester including Algorithms, Computer Networks, Linear Algebra, and more."
+    "excerpt": "Course overview for the new semester including Algorithms, Computer Networks, Linear Algebra, and more.",
+    "public": true
   },
   {
     "slug": "topik6-in-10months",
@@ -29,6 +32,7 @@
     "date": "2025-08-31",
     "displayDate": "August 31, 2025",
     "tag": "Learning",
-    "excerpt": "My journey of learning Korean from complete beginner to TOPIK 6 in approximately 10 months. Detailed strategies included."
+    "excerpt": "My journey of learning Korean from complete beginner to TOPIK 6 in approximately 10 months. Detailed strategies included.",
+    "public": true
   }
 ]

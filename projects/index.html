@@ -75,9 +75,10 @@
             try {
                 const response = await fetch('posts.json');
                 const projects = await response.json();
-                projects.sort((a, b) => new Date(b.date) - new Date(a.date));
+                const visibleProjects = projects.filter(p => p.public !== false);
+                visibleProjects.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-                allProjectsGrid.innerHTML = projects.map(project => {
+                allProjectsGrid.innerHTML = visibleProjects.map(project => {
                     const techTags = project.techStack
                         ? project.techStack.join(', ')
                         : '';

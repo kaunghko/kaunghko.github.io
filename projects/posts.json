@@ -10,7 +10,8 @@
     "readTime": "3 min read",
     "techStack": ["React Native", "Expo", "Firebase", "Gemini AI", "Whisper", "Google Maps"],
     "heroImage": "assets/projects/manfo-hero.svg",
-    "screenshots": []
+    "screenshots": [],
+    "public": true
   },
   {
     "slug": "personal-blog-improvements",
@@ -23,6 +24,7 @@
     "readTime": "2 min read",
     "techStack": ["HTML", "CSS", "JavaScript"],
     "heroImage": "assets/projects/blog-hero.svg",
-    "screenshots": []
+    "screenshots": [],
+    "public": false
   }
 ]

@@ -130,6 +130,27 @@ Type: A Record   Host: @   Value: 185.199.111.153</pre>
             navToggle.classList.toggle('active');
             navLinks.classList.toggle('active');
         });
+
+        (async () => {
+            const parts = window.location.pathname.replace(/\/index\.html$/, '').split('/').filter(Boolean);
+            const slug = parts[parts.length - 1];
+            try {
+                const res = await fetch('../posts.json');
+                const items = await res.json();
+                const item = items.find(i => i.slug === slug);
+                if (item && item.public === false) {
+                    document.title = 'Private | Kaung Htet Ko';
+                    document.querySelector('main').innerHTML = `
+                        <div class="post-content" style="text-align:center; padding: 4rem 1rem;">
+                            <h1 class="post-title">This content is private</h1>
+                            <p class="post-meta">This page is not currently available to the public.</p>
+                            <a href="../../index.html" class="back-link" style="margin-top:2rem;display:inline-flex;">
+                                ← Back to Home
+                            </a>
+                        </div>`;
+                }
+            } catch(e) { /* fail open */ }
+        })();
     </script>
 </body>
 

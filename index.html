@@ -373,9 +373,10 @@
             try {
                 const response = await fetch('projects/posts.json');
                 const projects = await response.json();
-                projects.sort((a, b) => new Date(b.date) - new Date(a.date));
+                const visibleProjects = projects.filter(p => p.public !== false);
+                visibleProjects.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-                projectsGrid.innerHTML = projects.map((project, i) => {
+                projectsGrid.innerHTML = visibleProjects.map((project, i) => {
                     const isFeatured = i === 0;
                     const cardClass = isFeatured ? 'project-featured' : 'project-secondary';
                     const titleClass = isFeatured ? 'project-featured-title' : 'project-secondary-title';
@@ -424,8 +425,9 @@
             try {
                 const response = await fetch('blog/posts.json');
                 const posts = await response.json();
-                posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-                const postsToShow = posts.slice(0, 4);
+                const visiblePosts = posts.filter(p => p.public !== false);
+                visiblePosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+                const postsToShow = visiblePosts.slice(0, 4);
 
                 blogGrid.innerHTML = postsToShow.map(post => `
                     <a href="blog/${post.slug}/index.html" class="blog-list-item">
@@ -445,7 +447,7 @@
                     </a>
                 `).join('');
 
-                if (posts.length > 4) blogSeeMore.style.display = 'block';
+                if (visiblePosts.length > 4) blogSeeMore.style.display = 'block';
             } catch (error) {
                 console.error('Error loading blog posts:', error);
             }
